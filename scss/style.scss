@@ -1,0 +1,245 @@
+$background-primary-color: #ecf4fd;
+$background-secondary-color: #9fc7f5;
+$text-color: #555;
+
+*{
+  margin:0;
+  padding:0;
+  border-box:box-sizing;
+  
+}
+html{
+  font-size: 62.5%;
+}
+body {
+  color: $text-color;
+  font-size: 1.6rem;
+}
+
+
+
+
+$large-spacing : 4rem;
+$medium-spacing: 2rem;
+$small-spacing: 1rem;
+@mixin clearfix{
+   content: "";
+   display: table;
+   clear: both;
+}
+.header__logo{
+  display: inline-block;
+  margin-left: $medium-spacing;
+  &:after{@include clearfix;}
+   p{
+    float:right;
+    padding: $medium-spacing * 1.1;
+  }
+}
+#header-img {
+  display: inline-block;
+  width: $large-spacing * 2;
+  height: auto;
+  float:left;
+}
+.header__nav{
+  display: inline-block;
+  float:right;
+  &:after{@include clearfix;}
+  a{
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+  }
+}
+.showcase__nav{
+  list-style : none;
+}
+li{
+  color: inherit;
+  display: inline-block;
+  margin-right: $medium-spacing * 1.5;
+  padding: $medium-spacing;
+  
+}
+.nav-link{
+    text-decoration: none;
+    color: inherit;
+}
+.header__fixed--topscroll{
+  color: #fff;
+  padding-top: $medium-spacing;
+  position: fixed;
+  top:0;
+  width: 100%;
+  background-color: #eee;
+  color: black;
+  z-index : 10000;
+  &:after{@include clearfix;}
+}
+.header__fixed--topdefault{
+  background-image: linear-gradient(rgba(0, 0, 0,0.8) , rgba(0, 0, 0,0.8)) ,url("https://sv1.uphinhnhanh.com/images/2018/07/25/hero.jpg");
+  width: 80vw;
+  height: 95vh;
+  background-position : center;
+  background-size: cover;
+  margin: $large-spacing*3 auto $medium-spacing*1.5 auto;
+  position: relative;
+  z-index: 1;
+}
+.header__form{
+  position: absolute;
+  transform: translate(-50% , -50%);
+  top: 60%;
+  left:50%;
+  display: flex;
+  align-items : center;
+  flex-direction: column;
+  
+}
+#email,#submit{
+  display: block;
+  padding: 10px 20px;
+  margin-bottom: $medium-spacing;
+}
+#submit {
+  align-self : center;
+  padding: $small-spacing*.5 &small-spacing;
+  text-align: center;
+}
+.section__how-it-work,
+.section__feature,
+.section__pricing{
+  text-align: center;
+  margin-bottom: $medium-spacing;
+  padding:$medium-spacing;
+}
+.feature__content
+{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  article {padding: $medium-spacing;}
+  @media only screen and (max-width: 768px){
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    
+    p{
+      text-align: left;
+    }
+   
+  }
+}
+.how-it-work--container{
+  width: 100%;
+  color: red;
+ 
+}
+
+.main__content{
+  width: 80%;
+  margin: 40px auto;
+}
+.section__header{
+  display:block;
+  font-size: 4rem;
+  padding: $small-spacing;
+  margin-bottom: $large-spacing;
+}
+.pricing__container{
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-row: 1fr;
+  grid-gap: $medium-spacing;
+  @media only screen and (max-width: 768px){
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap:$small-spacing;
+    p{
+      text-align: center;
+    }
+   
+  }
+}
+.pricing__box{
+  background-color:$background-secondary-color;
+  padding: $medium-spacing;
+  border-radius: $small-spacing;
+  p, h4{
+    font-weight: 700;
+    color: black;
+    padding: $small-spacing;
+  }
+  h4{
+    font-size: 3rem;
+    padding: $medium-spacing;
+  }
+  button{
+    margin-top: $medium-spacing;
+    padding: $small-spacing;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    
+  }
+  @media only screen and (max-width: 768px){
+    padding: $small-spacing;
+    border-radius: $small-spacing*.5;
+    p, h4{
+      font-weight: 700;
+      color: black;
+      padding: $small-spacing*.5;
+      }
+    h4{
+      font-size: 3rem;
+      padding: $small-spacing;
+      }
+    button{
+      margin-top: $small-spacing;
+      padding: $small-spacing*.5;
+      font-size: 1.5rem;
+      border-radius: 1rem;
+
+      }
+  }
+  #video{
+    width: 100%;
+    height: auto;
+  }
+ 
+}
+ section:nth-child(odd){
+    background-color: $background-primary-color;
+  }
+#header{
+  @media only screen and (max-width: 768px){
+    .header__logo,
+    .header__nav{
+      display:block;
+      float:none;
+      text-align: center;
+    }
+    
+    .logo__img,
+    .logo__name{
+        float:none;
+        display:inline-block;
+      }
+    .showcase__nav li{
+      display:block;
+      text-align: center;
+    }
+    .nav-link{
+      text-align:center;
+    }
+    
+    
+  }
+  @media only screen and (max-width: 480px){
+    #nav-bar{
+      font-size: 1.4rem;
+      letter-spacing: 0;
+      padding: $small-spacing;
+    }
+  }
+}

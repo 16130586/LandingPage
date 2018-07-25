@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  border-box: box-sizing;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #555;
+  font-size: 1.6rem;
+}
+
+.header__logo {
+  display: inline-block;
+  margin-left: 2rem;
+}
+.header__logo:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.header__logo p {
+  float: right;
+  padding: 2.2rem;
+}
+
+#header-img {
+  display: inline-block;
+  width: 8rem;
+  height: auto;
+  float: left;
+}
+
+.header__nav {
+  display: inline-block;
+  float: right;
+}
+.header__nav:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.header__nav a {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+}
+
+.showcase__nav {
+  list-style: none;
+}
+
+li {
+  color: inherit;
+  display: inline-block;
+  margin-right: 3rem;
+  padding: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header__fixed--topscroll {
+  color: #fff;
+  padding-top: 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #eee;
+  color: black;
+  z-index: 10000;
+}
+.header__fixed--topscroll:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.header__fixed--topdefault {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://sv1.uphinhnhanh.com/images/2018/07/25/hero.jpg");
+  width: 80vw;
+  height: 95vh;
+  background-position: center;
+  background-size: cover;
+  margin: 12rem auto 3rem auto;
+  position: relative;
+  z-index: 1;
+}
+
+.header__form {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 60%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#email, #submit {
+  display: block;
+  padding: 10px 20px;
+  margin-bottom: 2rem;
+}
+
+#submit {
+  align-self: center;
+  padding: 0.5rem #submit small-spacing;
+  text-align: center;
+}
+
+.section__how-it-work,
+.section__feature,
+.section__pricing {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+}
+
+.feature__content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+}
+.feature__content article {
+  padding: 2rem;
+}
+@media only screen and (max-width: 768px) {
+  .feature__content {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .feature__content p {
+    text-align: left;
+  }
+}
+
+.how-it-work--container {
+  width: 100%;
+  color: red;
+}
+
+.main__content {
+  width: 80%;
+  margin: 40px auto;
+}
+
+.section__header {
+  display: block;
+  font-size: 4rem;
+  padding: 1rem;
+  margin-bottom: 4rem;
+}
+
+.pricing__container {
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-row: 1fr;
+  grid-gap: 2rem;
+}
+@media only screen and (max-width: 768px) {
+  .pricing__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1rem;
+  }
+  .pricing__container p {
+    text-align: center;
+  }
+}
+
+.pricing__box {
+  background-color: #9fc7f5;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.pricing__box p, .pricing__box h4 {
+  font-weight: 700;
+  color: black;
+  padding: 1rem;
+}
+.pricing__box h4 {
+  font-size: 3rem;
+  padding: 2rem;
+}
+.pricing__box button {
+  margin-top: 2rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+}
+@media only screen and (max-width: 768px) {
+  .pricing__box {
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  .pricing__box p, .pricing__box h4 {
+    font-weight: 700;
+    color: black;
+    padding: 0.5rem;
+  }
+  .pricing__box h4 {
+    font-size: 3rem;
+    padding: 1rem;
+  }
+  .pricing__box button {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+  }
+}
+.pricing__box #video {
+  width: 100%;
+  height: auto;
+}
+
+section:nth-child(odd) {
+  background-color: #ecf4fd;
+}
+
+@media only screen and (max-width: 768px) {
+  #header .header__logo,
+  #header .header__nav {
+    display: block;
+    float: none;
+    text-align: center;
+  }
+  #header .logo__img,
+  #header .logo__name {
+    float: none;
+    display: inline-block;
+  }
+  #header .showcase__nav li {
+    display: block;
+    text-align: center;
+  }
+  #header .nav-link {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #header #nav-bar {
+    font-size: 1.4rem;
+    letter-spacing: 0;
+    padding: 1rem;
+  }
+}
